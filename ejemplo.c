@@ -2,8 +2,6 @@
 #include "figures.h"
 
 void display() {
-  char **blackKnight = knight;
+  char **blackKnight = flipV(knight);
   interpreter(blackKnight);
-  char **whitepawn = reverse(pawn);
-  interpreter(whitepawn);
 }
