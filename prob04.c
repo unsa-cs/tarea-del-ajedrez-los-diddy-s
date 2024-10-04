@@ -4,5 +4,7 @@
 
 void display() {
   char **torre_b = superImpose(rook, reverse(whiteSquare));
-  interpreter(torre_b);
+  char **caballo_b = superImpose(knight, whiteSquare);
+
+  interpreter(join(torre_b, caballo_b));
 }
