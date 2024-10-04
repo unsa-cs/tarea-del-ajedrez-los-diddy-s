@@ -1,5 +1,6 @@
 #include "chess.h"
 #include "figures.h"
+#include <stdlib.h>
 
 void display() {
   char **FilaB = repeatH(join(whiteSquare, reverse(whiteSquare)), 4);
@@ -8,4 +9,8 @@ void display() {
   char **DFila = up(FilaA, FilaB);
 
   interpreter(repeatV(DFila, 2));
+
+  free(FilaA);
+  free(FilaB);
+  free(DFila);
 }
