@@ -3,7 +3,7 @@
 
 void display() {
   char **blackKnight = reverse(knight);
-  char **whiteSquare = superImpose(whiteSquare,blackKnight);
-  interpreter(blackKnight);
-
+  char **whitesquare = whiteSquare;
+  char **square = superImpose(blackKnight, whitesquare);
+  interpreter(square);
 }
