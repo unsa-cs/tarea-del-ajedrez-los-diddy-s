@@ -2,6 +2,8 @@
 #include "figures.h"
 
 void display() {
-  char **tablero = reverse(repeatH(join(whiteSquare, reverse(whiteSquare)), 4));
-  interpreter(tablero);
+  char **FilaB = repeatH(join(whiteSquare, reverse(whiteSquare)), 4);
+  char **FilaA = reverse(FilaA);
+  char **DFila = up(FilaA, FilaB);
+  interpreter(DFila);
 }
