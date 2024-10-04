@@ -9,8 +9,9 @@ void display() {
 
   char **unidos = join(square, whitesquare);
 
-  interpreter(square);
+  interpreter(unidos);
 
+  free(unidos);
   free(blackKnight);
   free(square);
 }
