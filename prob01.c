@@ -2,7 +2,7 @@
 #include "figures.h"
 
 void display() {
-  char **tablero = join(whiteSquare, reverse(whiteSquare));
-
+  char **tablero = repeatH(join(whiteSquare, reverse(whiteSquare)),4);
+  
   interpreter(tablero);
 }
