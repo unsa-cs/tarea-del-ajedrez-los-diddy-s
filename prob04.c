@@ -3,5 +3,6 @@
 #include <stdlib.h>
 
 void display() {
-  char **FilaB = repeatH(join(whiteSquare, reverse(whiteSquare)), 4);
+  char **torre_b = superImpose(rook, reverse(whiteSquare));
+  interpreter(torre_b);
 }
