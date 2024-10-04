@@ -7,9 +7,9 @@ void display() {
   char **whitesquare = whiteSquare;
   char **square = superImpose(blackKnight, whitesquare);
   char **alfil = pawn;
-  char **unidos = up(join(square, whitesquare), alfil);
-
-  interpreter(unidos);
+  char **unidos = join(square, whitesquare);
+  char **repeat = repeatH(unidos, 4);
+  interpreter(repeat);
 
   free(unidos);
   free(blackKnight);
