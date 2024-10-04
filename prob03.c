@@ -3,7 +3,7 @@
 
 void display() {
   char **FilaB = repeatH(join(whiteSquare, reverse(whiteSquare)), 4);
-  char **FilaA = reverse(FilaA);
+  char **FilaA = reverse(FilaB);
   char **DFila = up(FilaA, FilaB);
   interpreter(DFila);
 }
