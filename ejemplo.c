@@ -4,4 +4,6 @@
 void display() {
   char **blackKnight = knight;
   interpreter(blackKnight);
+  char **whitepawn = reverse(pawn);
+  interpreter(whitepawn);
 }
