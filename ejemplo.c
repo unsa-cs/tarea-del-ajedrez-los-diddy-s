@@ -6,6 +6,9 @@ void display() {
   char **blackKnight = reverse(knight);
   char **whitesquare = whiteSquare;
   char **square = superImpose(blackKnight, whitesquare);
-  free(blackKnight);
+
   interpreter(square);
+
+  free(blackKnight);
+  free(square);
 }
