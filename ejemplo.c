@@ -2,8 +2,8 @@
 #include "figures.h"
 
 void display() {
-  char **blackKnight = rotateL(knight);
-  
+  char **blackKnight = reverse(knight);
+  char **whiteSquare = superImpose(whiteSquare,blackKnight);
   interpreter(blackKnight);
 
 }
