@@ -7,5 +7,6 @@ void display() {
   char **whitesquare = whiteSquare;
   char **square = superImpose(blackKnight, whitesquare);
   free(blackKnight);
+  free(whitesquare);
   interpreter(square);
 }
