@@ -26,7 +26,8 @@ void display() {
   char **fila_peones = repeatH(pawn, 8);
   char **piezas_negras = reverse(piezas_especiales);
   char **peones_negros = reverse(fila_peones);
-  char **patron_A = up(piezas_especiales, fila_peones);
-  char **patron_B = up(peones_negros, piezas_negras);
-  interpreter(superImpose(up(patron_A, patron_B), createFilas(4)));
+  char **intermedio = createFilas(4);
+  char **p_A = superImpose(up(piezas_especiales, fila_peones), createFilas(2));
+  char **p_B = superImpose(up(peones_negros, piezas_negras), createFilas(2));
+  interpreter(up(p_A, up(intermedio, p_B)));
 }
