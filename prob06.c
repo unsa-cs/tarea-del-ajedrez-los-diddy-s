@@ -6,7 +6,8 @@ char **createTablero() {
   char **neg = reverse(repeatH(join(whiteSquare, reverse(whiteSquare)), 4)),
        **blan = repeatH(join(whiteSquare, reverse(whiteSquare)), 4),
        **estructura = up(neg, blan);
-  return estructura;
+  char **tablero = repeatV(estructura, 4);
+  return tablero;
 }
 
 char **special_pieces() {
@@ -25,5 +26,5 @@ void display() {
   char **piezas_especiales = special_pieces();
   char **fila_peones = repeatH(pawn, 8);
   // interpreter(up(piezas_especiales, fila_peones));
-  interpreter(createTablero());
+  interpreter(superImpose(king, createTablero()));
 }
