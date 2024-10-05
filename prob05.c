@@ -11,5 +11,5 @@ void display() {
   char **fil_1 = join(torre_caballo, alfin_reyna);
   char **fil_2 = join(rey_alfil, caballo_torre);
   char **piezas = reverse(join(fil_1, fil_2));
-  interpreter(piezas);
+  interpreter(superImpose(piezas, tablero));
 }
