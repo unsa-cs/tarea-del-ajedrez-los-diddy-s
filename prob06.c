@@ -17,5 +17,6 @@ char ** special_pieces(){
 
 void display() {
   char ** piezas_especiales = special_pieces();
-  interpreter(piezas_especiales);
+  char ** fila_peones = repeatH(pawn, 8);
+  interpreter(up(piezas_especiales, fila_peones));
 }
