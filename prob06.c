@@ -6,7 +6,7 @@ char **createFilas(int filas) {
   char **neg = reverse(repeatH(join(whiteSquare, reverse(whiteSquare)), 4)),
        **blan = repeatH(join(whiteSquare, reverse(whiteSquare)), 4),
        **estructura = up(neg, blan);
-  char **tablero = repeatV(estructura, filas);
+  char **tablero = repeatV(estructura, filas / 2);
   return tablero;
 }
 
