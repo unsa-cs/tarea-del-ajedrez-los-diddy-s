@@ -1,9 +1,21 @@
 #include "chess.h"
 #include "figures.h"
+#include <stdlib.h>
 
+char **posicion(int pos, char **pieza) {
+  char **fila = 0;
+
+  for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 4; j++) {
+      if (i + j % 2 == 0) {
+        whiteSquare;
+      } else {
+        reverse(whiteSquare);
+      }
+    }
+  }
+}
 void display() {
-  char **tablero = reverse(repeatV(join(whiteSquare, reverse(whiteSquare)), 2));
-  char **fila_1 = join(knight, rotateL(knight));
 
-  interpreter(superImpose(fila_1, tablero));
+  interpreter(posicion(,)
 }
