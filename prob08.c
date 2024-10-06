@@ -22,14 +22,14 @@ char **createFilas(int pos, char **cuadrado_in, char **pieza) {
 }
 
 void display() {
-  char **fila_1 = createFilas(2, reverse(whiteSquare), queen);
-  char **fila_2 = createFilas(4, whiteSquare, queen);
-  char **fila_3 = createFilas(7, reverse(whiteSquare), queen);
-  char **fila_4 = createFilas(7, whiteSquare, queen);
+  char **fila_1 = createFilas(6, reverse(whiteSquare), queen);
+  char **fila_2 = createFilas(1, whiteSquare, queen);
+  char **fila_3 = createFilas(3, reverse(whiteSquare), queen);
+  char **fila_4 = createFilas(0, whiteSquare, queen);
   char **fila_5 = createFilas(7, reverse(whiteSquare), queen);
-  char **fila_6 = createFilas(7, whiteSquare, queen);
-  char **fila_7 = createFilas(4, reverse(whiteSquare), queen);
-  char **fila_8 = createFilas(2, whiteSquare, queen);
+  char **fila_6 = createFilas(4, whiteSquare, queen);
+  char **fila_7 = createFilas(2, reverse(whiteSquare), queen);
+  char **fila_8 = createFilas(5, whiteSquare, queen);
   char **tab1 = up(fila_2, fila_1);
   char **tab2 = up(fila_3, tab1);
   char **tab3 = up(fila_4, tab2);
