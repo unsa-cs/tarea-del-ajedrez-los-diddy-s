@@ -2,20 +2,15 @@
 #include "figures.h"
 #include <stdlib.h>
 
-char **posicion(int pos, char **pieza) {
-  char **fila = 0;
-
-  for (int i = 0; i < 4; i++) {
-    for (int j = 0; j < 4; j++) {
-      if (i + j % 2 == 0) {
-        whiteSquare;
-      } else {
-        reverse(whiteSquare);
-      }
-    }
-  }
+char **createFilas(int filas) {
+  char **neg = reverse(repeatH(join(whiteSquare, reverse(whiteSquare)), 2)),
+       **blan = repeatH(join(whiteSquare, reverse(whiteSquare)), 2),
+       **estructura = up(neg, blan);
+  char **tablero = repeatV(estructura, filas / 2);
+  return tablero;
 }
+
 void display() {
 
-  interpreter(posicion(,)
+  interpreter(createFilas(4));
 }
