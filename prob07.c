@@ -2,9 +2,9 @@
 #include "figures.h"
 #include <stdlib.h>
 
-char **createFilas(int pos, char **cuadrado_in) {
+char **createFilas(int pos, char **cuadrado_in, char **pieza) {
   char **fila = reverse(cuadrado_in);
-  char **caballo = knight;
+  char **caballo = pieza;
   char **cuadrado = cuadrado_in;
   for (int i = 1; i < 8; i++) {
     if (i % 2 == 0)
@@ -19,14 +19,15 @@ char **createFilas(int pos, char **cuadrado_in) {
 }
 
 void display() {
-  char **fila_1 = createFilas(4, reverse(whiteSquare));
-  char **fila_2 = createFilas(4, whiteSquare);
-  char **fila_3 = createFilas(0, reverse(whiteSquare));
-  char **fila_4 = createFilas(0, whiteSquare);
-  char **fila_5 = createFilas(0, reverse(whiteSquare));
-  char **fila_6 = createFilas(0, whiteSquare);
-  char **fila_7 = createFilas(4, reverse(whiteSquare));
-  char **fila_8 = createFilas(4, whiteSquare);
+  char **fila_1 =
+      createFilas(2, reverse(whiteSquare), rotateL(rotateL(knight)));
+  char **fila_2 = createFilas(4, whiteSquare, rotateR((knight)));
+  char **fila_3 = createFilas(0, reverse(whiteSquare), knight);
+  char **fila_4 = createFilas(0, whiteSquare, knight);
+  char **fila_5 = createFilas(0, reverse(whiteSquare), knight);
+  char **fila_6 = createFilas(0, whiteSquare, knight);
+  char **fila_7 = createFilas(4, reverse(whiteSquare), rotateL(knight));
+  char **fila_8 = createFilas(2, whiteSquare, knight);
   char **tab1 = up(fila_2, fila_1);
   char **tab2 = up(fila_3, tab1);
   char **tab3 = up(fila_4, tab2);
